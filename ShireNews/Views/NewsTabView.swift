@@ -1,9 +1,4 @@
-//
-//  TabView.swift
-//  ShireNews
-//
-//  Created by Nova on 04/06/22.
-//
+// Tab view for article
 
 import SwiftUI
 

@@ -9,6 +9,13 @@ struct ContentView: View {
                 .tabItem{
                     Label("News", systemImage: "newspaper")
                 }
+            
+            BookmarkView()
+                .tabItem{
+                    //system icon for saved; placeholder
+                    Label("Bookmarks", systemImage: "newspaper")
+                }
+            
         }
     }
 }

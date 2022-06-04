@@ -1,3 +1,5 @@
+// View model for Article
+
 import SwiftUI
 
 enum DataFetchPhase<T>{

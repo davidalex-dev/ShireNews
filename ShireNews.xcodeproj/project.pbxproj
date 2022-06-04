@@ -26,6 +26,7 @@
 		C21A1365284B7ACE00D4386A /* NewsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A1364284B7ACE00D4386A /* NewsTabView.swift */; };
 		C21A1367284B7C1B00D4386A /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A1366284B7C1B00D4386A /* PlaceholderView.swift */; };
 		C21A1369284B7C6C00D4386A /* RetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A1368284B7C6C00D4386A /* RetryView.swift */; };
+		C21A136B284B7D5F00D4386A /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A136A284B7D5F00D4386A /* BookmarkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C21A1364284B7ACE00D4386A /* NewsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTabView.swift; sourceTree = "<group>"; };
 		C21A1366284B7C1B00D4386A /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		C21A1368284B7C6C00D4386A /* RetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryView.swift; sourceTree = "<group>"; };
+		C21A136A284B7D5F00D4386A /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				C21A1364284B7ACE00D4386A /* NewsTabView.swift */,
 				C21A1366284B7C1B00D4386A /* PlaceholderView.swift */,
 				C21A1368284B7C6C00D4386A /* RetryView.swift */,
+				C21A136A284B7D5F00D4386A /* BookmarkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				C21A135E284B6E2000D4386A /* NewsAPI.swift in Sources */,
 				C21A1361284B6E6C00D4386A /* ArticleViewModel.swift in Sources */,
 				C21A135A284B682400D4386A /* BrowserView.swift in Sources */,
+				C21A136B284B7D5F00D4386A /* BookmarkView.swift in Sources */,
 				C21A1358284B639C00D4386A /* ListView.swift in Sources */,
 				C21A1350284B62BA00D4386A /* APIResponse.swift in Sources */,
 				C21A131F284B61BF00D4386A /* ShireNewsApp.swift in Sources */,
