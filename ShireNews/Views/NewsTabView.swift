@@ -11,10 +11,11 @@ struct NewsTabView: View {
             
             ListView(articles: articles)
                 .overlay(overlayView)
+                .refreshable {
+                    loadArticle()
+                }
                 .onAppear{
-                    async{
-                        await articleVM.loadArticles()
-                    }
+                    loadArticle()
                 }
                 .navigationTitle("The Shire News")
             
@@ -29,7 +30,7 @@ struct NewsTabView: View {
             case .empty: ProgressView()
             
             case .success(let articles) where articles.isEmpty:
-                PlaceholderView(text: "No articles", image:nil)
+                PlaceholderView(text: "No articles...", image:nil)
             
             case .failure(let error):
                 RetryView(text: error.localizedDescription){
@@ -47,6 +48,12 @@ struct NewsTabView: View {
         }else{
             return []
         }
+    }
+    
+    private func loadArticle(){
+            async{
+                await articleVM.loadArticles()
+            }
     }
     
 }
