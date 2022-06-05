@@ -28,6 +28,7 @@
 		C21A1369284B7C6C00D4386A /* RetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A1368284B7C6C00D4386A /* RetryView.swift */; };
 		C21A136B284B7D5F00D4386A /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A136A284B7D5F00D4386A /* BookmarkView.swift */; };
 		C22FA947284C51FF0033271A /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22FA946284C51FF0033271A /* BookmarkViewModel.swift */; };
+		C22FA949284C573C0033271A /* BookmarkDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22FA948284C573C0033271A /* BookmarkDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		C21A1368284B7C6C00D4386A /* RetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryView.swift; sourceTree = "<group>"; };
 		C21A136A284B7D5F00D4386A /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		C22FA946284C51FF0033271A /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		C22FA948284C573C0033271A /* BookmarkDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				C21A134F284B62BA00D4386A /* APIResponse.swift */,
 				C21A135B284B6E0C00D4386A /* Category.swift */,
 				C21A135D284B6E2000D4386A /* NewsAPI.swift */,
+				C22FA948284C573C0033271A /* BookmarkDatabase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				C21A136B284B7D5F00D4386A /* BookmarkView.swift in Sources */,
 				C21A1358284B639C00D4386A /* ListView.swift in Sources */,
 				C21A1350284B62BA00D4386A /* APIResponse.swift in Sources */,
+				C22FA949284C573C0033271A /* BookmarkDatabase.swift in Sources */,
 				C21A131F284B61BF00D4386A /* ShireNewsApp.swift in Sources */,
 				C21A134E284B624900D4386A /* Article.swift in Sources */,
 				C21A135C284B6E0C00D4386A /* Category.swift in Sources */,
