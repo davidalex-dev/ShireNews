@@ -11,14 +11,9 @@ struct NewsTabView: View {
             
             ListView(articles: articles)
                 .overlay(overlayView)
-                .refreshable {
-                    loadArticle()
-                }
-                .onAppear{
-                    loadArticle()
-                }
+                .task(id: articleVM.fetchTaskToken, loadArticle)
+                .refreshable(action: refreshList)
                 .navigationTitle("The Shire News")
-            
             
         }
     }
@@ -30,12 +25,10 @@ struct NewsTabView: View {
             case .empty: ProgressView()
             
             case .success(let articles) where articles.isEmpty:
-                PlaceholderView(text: "No articles...", image:nil)
+                PlaceholderView(text: "No articles... yet.", image:Image(systemName: "newspaper"))
             
             case .failure(let error):
-                RetryView(text: error.localizedDescription){
-                    //refresh the API
-                }
+            RetryView(text: error.localizedDescription, retryAction: refreshList)
             
             default: EmptyView()
         }
@@ -50,16 +43,20 @@ struct NewsTabView: View {
         }
     }
     
-    private func loadArticle(){
-            async{
-                await articleVM.loadArticles()
-            }
+    private func loadArticle() async{
+        await articleVM.loadArticles()
+    }
+    
+    private func refreshList(){
+        articleVM.fetchTaskToken = FetchTaskToken(category: articleVM.fetchTaskToken.category, token: Date())
     }
     
 }
 
 struct NewsTabView_Previews: PreviewProvider {
+    @StateObject static var bookmarkVM = BookmarkViewModel()
     static var previews: some View {
         NewsTabView(articleVM: ArticleViewModel(articles: Article.previewData))
+            .environmentObject(bookmarkVM)
     }
 }

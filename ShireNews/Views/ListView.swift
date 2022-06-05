@@ -6,6 +6,7 @@ struct ListView: View {
     
     let articles: [Article]
     @State private var selectedArticle: Article?
+    @EnvironmentObject var bookmarkVM: BookmarkViewModel
     
     var body: some View {
         List{
@@ -27,9 +28,11 @@ struct ListView: View {
 }
 
 struct ListView_Previews: PreviewProvider {
+    @StateObject static var bookmarkVM = BookmarkViewModel()
     static var previews: some View {
         NavigationView{
             ListView(articles: Article.previewData)
+                .environmentObject(bookmarkVM)
         }
     }
 }

@@ -13,7 +13,7 @@ struct ContentView: View {
             BookmarkView()
                 .tabItem{
                     //system icon for saved; placeholder
-                    Label("Bookmarks", systemImage: "newspaper")
+                    Label("Bookmarks", systemImage: "bookmark")
                 }
             
         }
@@ -21,7 +21,10 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    @StateObject static var bookmarkVM = BookmarkViewModel()
+    
     static var previews: some View {
         ContentView()
+            .environmentObject(bookmarkVM)
     }
 }
