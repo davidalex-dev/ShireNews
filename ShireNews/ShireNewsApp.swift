@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ShireNewsApp: App {
-    @StateObject var bookmarkVM = BookmarkViewModel()
+    @StateObject var bookmarkVM = BookmarkViewModel.shared
     
     var body: some Scene {
         WindowGroup {
