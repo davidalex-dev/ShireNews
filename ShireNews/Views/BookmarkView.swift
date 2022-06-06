@@ -10,13 +10,30 @@ import SwiftUI
 struct BookmarkView: View {
     
     @EnvironmentObject var bookmarkVM: BookmarkViewModel
+    @State var searchText: String = ""
     
     var body: some View {
+        let articles = self.showList
+        
         NavigationView{
-            ListView(articles: bookmarkVM.bookmarks)
+            ListView(articles: articles)
                 .overlay(overlayView(isEmpty: bookmarkVM.bookmarks.isEmpty))
                 .navigationTitle("Bookmarks")
+                .searchable(text: $searchText)
         }
+        
+    }
+    
+    private var showList: [Article]{
+        if searchText.isEmpty{
+            return bookmarkVM.bookmarks
+        }
+        
+        return bookmarkVM.bookmarks
+            .filter{
+                $0.title.lowercased()
+                    .contains(searchText.lowercased())
+            }
         
     }
     
