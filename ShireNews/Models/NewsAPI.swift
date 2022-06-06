@@ -63,7 +63,6 @@ struct NewsAPI{
         var url = "https://newsapi.org/v2/top-headlines"
         url += "?country=id"
         url += "&apiKey=\(apiKey)"
-        //url += "&category=\(category.rawValue)"
         url += "&q=\(searchString)"
         return URL(string: url)!
     }

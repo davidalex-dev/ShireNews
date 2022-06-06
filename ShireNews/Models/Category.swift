@@ -7,7 +7,6 @@
 // - Sports
 // - Health
 // - Science
-//
 
 import Foundation
 import UIKit

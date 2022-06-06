@@ -1,9 +1,4 @@
-//
-//  BookmarkView.swift
-//  ShireNews
-//
-//  Created by Nova on 04/06/22.
-//
+// View for saved bookmarks
 
 import SwiftUI
 
