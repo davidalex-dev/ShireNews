@@ -23,7 +23,7 @@ enum Category: String, CaseIterable{
     
     var text: String{
         if self == .general{
-            return "Top Headlines"
+            return "All Topics"
         }
         return rawValue.capitalized
     }

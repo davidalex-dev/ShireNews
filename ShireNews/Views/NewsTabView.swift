@@ -22,6 +22,7 @@ struct NewsTabView: View {
                     }
                 }
                 .onSubmit(of: .search, search)
+                .navigationBarItems(trailing: menu)
             
         }
     }
@@ -40,6 +41,17 @@ struct NewsTabView: View {
             
             default: EmptyView()
         }
+        
+    }
+    
+    private var menu: some View{
+        
+        Picker("Category", selection: $articleVM.fetchTaskToken.category){
+            ForEach(Category.allCases){
+                Text($0.text).tag($0)
+            }
+        }
+        
         
     }
     
