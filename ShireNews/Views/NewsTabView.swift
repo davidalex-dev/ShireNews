@@ -14,6 +14,14 @@ struct NewsTabView: View {
                 .task(id: articleVM.fetchTaskToken, loadArticle)
                 .refreshable(action: refreshList)
                 .navigationTitle("The Shire News")
+                .searchable(text: $articleVM.searchQuery)
+                .onChange(of: articleVM.searchQuery){
+                    newValue in
+                    if newValue.isEmpty{
+                        refreshList()
+                    }
+                }
+                .onSubmit(of: .search, search)
             
         }
     }
@@ -33,6 +41,14 @@ struct NewsTabView: View {
             default: EmptyView()
         }
         
+    }
+    
+    private func search(){
+        let searchQuery = articleVM.searchQuery
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        Task{
+            await articleVM.searchArticle()
+        }
     }
     
     private var articles: [Article]{
